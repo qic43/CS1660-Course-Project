@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM openjdk:7
 
 COPY /ToolBox
 WORKDIR /ToolBox
