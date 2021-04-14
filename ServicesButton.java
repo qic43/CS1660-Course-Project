@@ -1,4 +1,4 @@
-package CloudComputing;
+//package CloudComputing;
 
 import java.awt.Component;
 import java.awt.event.ActionEvent;
@@ -10,7 +10,7 @@ public class ServicesButton extends JButton{
 		this.setAlignmentX(Component.CENTER_ALIGNMENT);
 		this.setText(s);
 		ActionListener ac = new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent a) {
 				r.run();
 			}
 		};
