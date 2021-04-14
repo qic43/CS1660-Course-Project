@@ -1,0 +1,51 @@
+version: "3.9"
+services:
+    rstudio:
+        image: "rstudio"
+        ports:
+            - "8787:8787"
+        environment: 
+            - DISABLE_AUTH=true
+        
+    
+    spyder:
+        image: "spyder-desktop"
+        ports:
+            - "6080:6080" 
+            - "5900:5900"
+            
+    jupyter-notebook:
+        image: "jupyter"
+        command: ['start-notebook.sh', "--NotebookApp.token=''", "--NotebookApp.password=''"]
+        ports:
+            - "8888:8888"
+    
+    orange:
+        image: "orange-docker"
+        ports:
+            - "5901:5901"
+            - "6901:6901" 
+        volumes:
+            - .:/home/orange/Documents
+     
+    vscode:
+        image: "linuxserver"
+        ports: 
+            - "8443:8443"
+        volumes:
+            - .:/root/working
+    
+    tensorflow:
+        image: "tensorflow/tensorflow"
+        ports:
+            - "8889:8888"
+    
+    markdown:
+        image: "v4tech/markdown-editor"
+        ports:
+            - "12345:80"
+    
+    
+            
+    
+            
